@@ -7,7 +7,7 @@
     - name: master push deploy file
       copy:
         src: ./test3.yml
-        dest:  /home/user1/jenkins
+        dest:  /home/user1/jenkins/test3.yml
 
     - name: master pull image
       shell: "sudo kubectl apply -f /home/user1/jenkins/test3.yml"
