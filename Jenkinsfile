@@ -15,5 +15,19 @@ pipeline {
         '''
       }
     }
+    stage('jenkins -> node') {
+      steps {
+        sh '''
+        ansible-playbook nodebook.yml
+        '''
+      }
+    }
+    stage('jenkins -> master') {
+      steps {
+        sh '''
+        ansible-playbook masterbook.yml
+        '''
+      }
+    }
   }
 }
