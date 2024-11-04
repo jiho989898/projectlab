@@ -1,5 +1,5 @@
 ---
-- name: master playbook
+- name: node playbook
   hosts: node
   become: true
   gather_facts: true
