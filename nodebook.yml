@@ -1,0 +1,8 @@
+---
+- name: master playbook
+  hosts: node
+  become: true
+  gather_facts: true
+  tasks:
+    - name: image pull
+      shell: "sudo docker pull jiho9898/projectlab:jenkins"

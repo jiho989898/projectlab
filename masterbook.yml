@@ -1,0 +1,13 @@
+---
+- name: master playbook
+  hosts: master
+  become: true
+  gather_facts: true
+  tasks:
+    - name: master push deploy file
+      copy:
+        src: ./test3.yml
+        dest:  /home/user1/jenkins
+
+    - name: master pull image
+      shell: "sudo kubectl apply -f /home/user1/jenkins/"
