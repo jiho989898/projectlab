@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: test
-        image: jiho9898/projectlab:jenkins
+        image: 211.183.3.100/hk-repo/repository:jiho
         ports:
         - containerPort: 80
       imagePullSecrets:
