@@ -9,7 +9,7 @@ pipeline {
     stage('docker build and push') {
       steps {
         sh '''
-        docker login -u admin -p Harbor12345
+        docker login https://211.183.3.100 -u admin -p Harbor12345
         docker build -t 211.183.3.100/hk-repo/repository:jiho .
         docker push 211.183.3.100/hk-repo/repository:jiho
         '''
