@@ -9,9 +9,9 @@ pipeline {
     stage('docker build and push') {
       steps {
         sh '''
-        docker login -u jiho9898 -p Rladudwns98!
-        docker build -t jiho9898/projectlab:jenkins .
-        docker push jiho9898/projectlab:jenkins
+        docker login -u admin -p Harbor12345
+        docker build -t 211.183.3.100/hk-repo/repository:jiho .
+        docker push 211.183.3.100/hk-repo/repository:jiho
         '''
       }
     }
